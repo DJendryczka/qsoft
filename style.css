@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Topography */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e2dfdf;
+    background-color: #f4f4f4;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* Splash Screen */
+
+.splash {
+    height: 100dvh;
+    width: 100%;
+    margin: 0 auto;
+    background: radial-gradient(circle, #4d038e 0%, #110055 40%, #0f033d 80%, #0a0129 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.splash-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.splash-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.splash-image {
+    flex: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.one, .two, .text {
+    max-width: 300px;
+
+}
+
