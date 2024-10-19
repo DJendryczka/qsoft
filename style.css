@@ -17,10 +17,16 @@ body {
     background-color: #f4f4f4;
 }
 
+a {
+    text-decoration: none;
+    color: #e2dfdf;
+}
+
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    object-position: center;
     border-radius: 20px;
 }
 
@@ -33,16 +39,72 @@ img {
     margin: 0 auto;
     background: radial-gradient(circle, #4d038e 0%, #110055 40%, #0f033d 80%, #0a0129 100%);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    height: 10%;
+    padding: 0 40px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: none;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus,
+.navbar ul li a:active {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #b31eff, 0 0 30px #b31eff, 0 0 40px #b31eff;
+}
+
+.logo a img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.logo a img:hover,
+.logo a img:focus,
+.logo a img:active {
+    box-shadow: 0 0 15px #b31eff, 0 0 25px #b31eff, 0 0 35px #b31eff, 0 0 50px #b31eff;
 }
 
 .splash-content {
     width: 100%;
     max-width: 1440px;
+    height: 90%;
+    padding: 0 40px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
-    padding: 0 30px;
 }
 
 .splash-text {
@@ -51,6 +113,7 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    order: -1;
 }
 
 .splash-text h1 {
@@ -61,14 +124,115 @@ img {
 .splash-image {
     flex: 1.5;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-.one, .two, .text {
-    max-width: 300px;
-
+.one {
+    mix-blend-mode: overlay;
 }
 
+.btn {
+    padding: 10px 20px;
+    border: none;
+    width: 190px;
+    border-radius: 10px;
+    background-color: #4d038e;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 15px #820ce8, 0 0 25px #820ce8, 0 0 40px #820ce8, 0 0 60px #820ce8;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #b31eff, 0 0 30px #b31eff, 0 0 50px #b31eff, 0 0 70px #b31eff;
+}
+
+
+/* About */
+
+#about {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    height: 100dvh;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #4d038e 0%, #110055 40%, #0f033d 80%, #0a0129 100%);
+    
+}
+
+#about img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: overlay;
+}
+
+.about {
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px;
+    margin: 0 auto;
+    height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect to create glass-like transparency */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance glass effect */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: white; /* Text color */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.cards:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight change in background on hover */
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+
+   
+    .splash-content {
+        display: block;
+    }
+
+    .splash-text h1 {
+        font-size: 2rem;
+    }
+
+    .splash-image {
+        margin: 40px 0;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    .about {
+        height: auto;
+    }
+
+}
