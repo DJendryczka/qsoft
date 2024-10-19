@@ -46,7 +46,7 @@ img {
 
 .navbar {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1640px;
     height: 10%;
     padding: 0 40px;
     margin: 10px auto;
@@ -98,7 +98,7 @@ img {
 
 .splash-content {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1640px;
     height: 90%;
     padding: 0 40px;
     display: flex;
@@ -108,7 +108,7 @@ img {
 }
 
 .splash-text {
-    flex: 1;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,23 +117,21 @@ img {
 }
 
 .splash-text h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
 }
 
 .splash-image {
-    flex: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.one {
+    flex: 1;
     mix-blend-mode: overlay;
 }
 
+
+
+
 .btn {
     padding: 10px 20px;
+    margin-top: 30px;
     border: none;
     width: 190px;
     border-radius: 10px;
@@ -153,21 +151,21 @@ img {
 
 /* About */
 
-#about {
+#services, #about, #contact {
     position: relative;
     width: 100%;
     padding: 40px;
     margin: 0 auto;
     height: 100dvh;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle, #4d038e 0%, #110055 40%, #0f033d 80%, #0a0129 100%);
     
 }
 
-#about img {
+.services-image {
     position: absolute;
     top: 0;
     right: 0;
@@ -179,16 +177,15 @@ img {
     mix-blend-mode: overlay;
 }
 
-.about {
+.services {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1640px;
     padding: 40px;
     margin: 0 auto;
     height: 100dvh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    gap: 40px;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -196,14 +193,30 @@ img {
     background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
     backdrop-filter: blur(10px); /* Blur effect to create glass-like transparency */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance glass effect */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px;
-    width: 350px;
-    height: 350px;
+    border-radius: 25px; /* Rounded corners */
+    flex: 1 1 420px; /* Flexbox sizing */
+    min-height: 450px;
+    padding: 27px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     color: white; /* Text color */
-    text-align: center;
+    text-align: left;
     transition: all 0.3s ease-in-out;
+}
+
+.card-image {
+    max-width: 350px;
+    margin: 0 auto;;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-text ul {
+    list-style: none;
 }
 
 .cards:hover {
@@ -212,7 +225,7 @@ img {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
    
     .splash-content {
@@ -227,12 +240,14 @@ img {
         margin: 40px 0;
     }
 
-    #about {
+    #services {
         height: auto;
+        padding: 0 ;
     }
 
-    .about {
+    .services {
         height: auto;
+        flex-direction: column;
     }
 
 }
