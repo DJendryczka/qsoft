@@ -151,7 +151,7 @@ img {
 
 /* About */
 
-#services, #about, #contact {
+#services {
     position: relative;
     width: 100%;
     padding: 40px;
@@ -195,7 +195,6 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance glass effect */
     border-radius: 25px; /* Rounded corners */
     flex: 1 1 420px; /* Flexbox sizing */
-    min-height: 450px;
     padding: 27px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     color: white; /* Text color */
@@ -203,26 +202,39 @@ img {
     transition: all 0.3s ease-in-out;
 }
 
-.card-image {
-    max-width: 350px;
-    margin: 0 auto;;
+.cards h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 17px;
 }
 
-.card-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+.first { 
+    margin-bottom: 27px;
 }
 
-.card-text ul {
-    list-style: none;
-}
+
 
 .cards:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Slight change in background on hover */
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
+
+#contact {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(circle, #4d038e 0%, #110055 40%, #0f033d 80%, #0a0129 100%);
+}
+
+.contact, .footer {
+    padding: 20px 0;
+}
+
 
 
 @media screen and (max-width: 992px) {
@@ -250,4 +262,13 @@ img {
         flex-direction: column;
     }
 
+    #contact {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .contact {
+        padding-bottom: 0;
+    }
 }
